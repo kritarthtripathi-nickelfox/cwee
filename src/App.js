@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import PTWireframe8026Aug from "./pages/PTWireframe8026Aug";
+import  Home from "./pages/Home";
 
 function App() {
   const action = useNavigationType();
@@ -45,7 +46,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PTWireframe8026Aug />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
