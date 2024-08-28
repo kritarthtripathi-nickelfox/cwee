@@ -1,45 +1,101 @@
-import React from "react";
-import { Parallax } from "react-scroll-parallax";
- 
+import React, { useState, useEffect } from "react";
+import Fade from "react-reveal/Fade";
+import Slide from "react-reveal/Slide";
+import Zoom from "react-reveal/Zoom";
+
 const Home = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const textBoxPosition = scrollY < 100 ? 'bottom-[10rem]' : 'top-[40%] translate-y-[-50%]'; // Adjust positioning
+
   return (
-    <div className="w-full relative bg-lightskyblue h-[1848.375rem] overflow-hidden text-center text-[1.5rem] text-black font-lato">
-      <div className="fixed bg-lightskyblue inset-0 z-[1]">
+    <div className="w-full relative bg-skyblue h-auto overflow-hidden text-center text-[1.5rem] text-black font-lato">
+      {/* First Section with Title and Description */}
+      <div className="relative w-full h-auto">
+        {/* Static First Image */}
         <img
           className="w-full h-auto object-cover mix-blend-screen"
           alt=""
-          src="/sunrays@2x.png"
+          src="/Frame 29.png"
         />
-      </div>
-      <div className="relative z-[2]">
-        <div className="relative w-full">
-          <img
-            className="w-full h-auto object-cover"
-            alt="Clouds"
-            src="/clouds@2x.png"
-          />
-          <img
-            className="w-full h-[100vh] object-cover absolute top-0 left-0"
-            alt=""
-            src="/illustration@2x.png"
-          />
+
+        {/* Conditional Rendering of Title Image or Text Box */}
+        {scrollY < 100 ? ( // Adjust this threshold as needed
+          <Fade top>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Zoom>
+                <img
+                  className="w-[50%] h-auto object-contain"
+                  alt=""
+                  src="/title@2x.png"
+                />
+              </Zoom>
+            </div>
+          </Fade>
+        ) : (
+          <Slide bottom>
+             <div
+          className={`absolute left-[calc(50%_-_400px)] rounded-3xs bg-gray-100 w-[50rem] h-[18.75rem] flex flex-row items-center justify-center p-[2.5rem] box-border ${textBoxPosition}`}
+          style={{ transform: 'translateY(-50%)' }}
+        >
+          <div className="w-[44.563rem] relative tracking-[-0.02em] leading-[3.5rem] text-[2rem] flex items-center shrink-0">
+            Anomalous sunshine, packed cities, expensive land, changing
+            climate — what are the ground-level challenges to installing 7,000
+            GW of renewable energy (RE) capacity in India? That's the number
+            we might need to go net zero by 2070.
+          </div>
         </div>
-        <img
-          className="absolute top-[0rem] left-[calc(50%_-_316.2px)] w-[39.525rem] h-[9.375rem] object-cover"
-          alt=""
-          src="/title@2x.png"
-        />
+          </Slide>
+        )}
       </div>
-      <div className="relative z-[2]">
-        <h1>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo,
-          voluptate amet iusto saepe veritatis quod magnam itaque quam
-          praesentium odit modi dignissimos laudantium voluptatum quos eum,
-          architecto repellendus iste. Earum?
-        </h1>
-      </div>
+
+      {/* Remaining Images */}
+      <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Camel.png"
+      />
+      <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Tank.png"
+      />
+      <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Frame 36.png"
+      />
+       <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Frame 37.png"
+      />
+       <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Frame 35.png"
+      />
+       <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Frame 34.png"
+      />
+       <img
+        className="w-full h-auto object-cover mix-blend-screen"
+        alt=""
+        src="/Frame 33.png"
+      />
     </div>
   );
 };
- 
+
 export default Home;
+
+ 

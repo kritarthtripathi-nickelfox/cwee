@@ -5,8 +5,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import PTWireframe8026Aug from "./pages/PTWireframe8026Aug";
-import  Home from "./pages/Home";
+import Home from "./pages/Home";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const action = useNavigationType();
@@ -45,9 +45,11 @@ function App() {
   }, [pathname]);
 
   return (
+    <ParallaxProvider>
     <Routes>
       <Route path="/" element={<Home />} />
     </Routes>
+    </ParallaxProvider>
   );
 }
 export default App;
