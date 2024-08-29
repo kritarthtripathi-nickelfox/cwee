@@ -1,17 +1,17 @@
 .DesertScreen {
-    background-image: url('/public/Camel.png'); /* Adjust the path and image */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 220vh; /* Ensure it covers the viewport height */
-    position: relative; /* Ensure it’s positioned normally in the document flow */
-    padding: 2rem; /* Adjust padding as needed */
-    z-index: 0; /* Ensure it’s below the other content if needed */
+  background-image: url("/public/Camel.png"); /* Adjust the path and image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 220vh; /* Ensure it covers the viewport height */
+  position: relative; /* Ensure it’s positioned normally in the document flow */
+  padding: 2rem; /* Adjust padding as needed */
+  z-index: 0; /* Ensure it’s below the other content if needed */
 }
-.HighlightText{
-    color:red;
-    font-weight: 500;
+.HighlightText {
+  color: red;
+  font-weight: 500;
 }
-.Content{
-    margin-top: 300px;
+.Content {
+  margin-top: 300px;
 }
