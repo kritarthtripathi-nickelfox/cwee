@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Slide from 'react-reveal/Slide';
 import '../style/FirstScreen.css'
-import FirstScreenContentPart from './FirstScreenContentPart';
 
 function FirstScreen() {
     const [scrollY, setScrollY] = useState(0);
