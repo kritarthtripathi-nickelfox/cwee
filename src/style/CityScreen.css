@@ -13,7 +13,6 @@
     font-weight: 500;
 }
 .Content{
-    margin-top: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,4 +87,9 @@
     padding:0 !important;
     flex: 1 1 auto;
     scrollbar-width: none;
+}
+.borderLine {
+    width: 100px;
+    height: 1px;
+    background-color: brown;
 }

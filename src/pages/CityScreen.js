@@ -73,9 +73,11 @@ function CityScreen() {
                     {scrollY < 300 ? (
 
                         <div className=''>
+
                             <div
                                 className='absolute left-[calc(50%_-_400px)] rounded-3xs bg-gray-100 flex flex-row items-center justify-center p-[2.5rem] box-border Content'
                             >
+
                                 <div className=" w-[56.563rem] relative tracking-[-0.02em] leading-[3.5rem] text-[2rem]  items-center shrink-0">
                                     Tamil Nadu offers more than 150 GW of low-cost wind potential. Up to 50 GW, it has the lowest wind power generation costs. However, 23% of its ~500 GW solar potential is in districts such as Tenkasi and Coimbatore, with high land prices.
                                 </div>
@@ -83,26 +85,26 @@ function CityScreen() {
                         </div>
                     ) : (
                         <div
-                        className='absolute left-[calc(50%_-_400px)] rounded-3xs bg-gray-100 flex items-center justify-center p-[2.5rem] box-border Content'
-                    >
-                        <div className=" w-[56.563rem] relative tracking-[-0.02em] leading-[3.5rem] text-[2rem]  items-center shrink-0">
-                            Scaling RE beyond 300 GW is where things could start getting more complicated. Bustling cities and areas with steeper land prices and land conflicts enter the mix. What does that look like, you ask? Let’s explore.
-                        </div>
-                        <div className='buttonContainer'>
-                            <button
-                                className="CityOneButton"
-                                onClick={handlePaneLeftClick}
-                            >
-                                Explore TamilNadu
-                            </button>
-                            <button
-                                className="CityTwoButton"
+                            className='absolute left-[calc(50%_-_400px)] rounded-3xs bg-gray-100 flex items-center justify-center p-[2.5rem] box-border Content'
+                        >
+                            <div className=" w-[56.563rem] relative tracking-[-0.02em] leading-[3.5rem] text-[2rem]  items-center shrink-0">
+                                Scaling RE beyond 300 GW is where things could start getting more complicated. Bustling cities and areas with steeper land prices and land conflicts enter the mix. What does that look like, you ask? Let’s explore.
+                            </div>
+                            <div className='buttonContainer'>
+                                <button
+                                    className="CityOneButton"
                                 onClick={handlePaneRightClick}
-                            >
-                                Explore AndhraPradesh
-                            </button>
+                                >
+                                    Explore AndhraPradesh
+                                </button>
+                                <button
+                                    className="CityTwoButton"
+                                // onClick={handlePaneRightClick}
+                                >
+                                    Move Ahead
+                                </button>
+                            </div>
                         </div>
-                    </div>
                     )}
                 </div>
             </SlidingPane>
