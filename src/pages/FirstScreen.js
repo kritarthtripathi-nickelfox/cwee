@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import Slide from 'react-reveal/Slide';
 import '../style/FirstScreen.css'
+import FirstScreenContentPart from './FirstScreenContentPart';
 
 function FirstScreen() {
     const [scrollY, setScrollY] = useState(0);
+    const [show, setShow] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
-
+        // setShow(!show)
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
+    }, [scrollY]);
     // Determine visibility and position of the text box based on scrollY
 
     return (
@@ -20,7 +21,7 @@ function FirstScreen() {
                 className="fixed inset-0 bg-cover bg-center FirstScreen"
             />
             <div className="ImageContainer">
-                {scrollY < 300 ? (
+                {scrollY < 100 ? (
                     <>
                         <img
                             className= {scrollY < 100 ? "LogoImage" : "fadeLogoImage"}
@@ -39,7 +40,10 @@ function FirstScreen() {
                         </button>
                     </>
                 ) : (
-                  <></>
+                  <>
+                        <FirstScreenContentPart/>
+
+                  </>
                 )}
             </div>
         </div>

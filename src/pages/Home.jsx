@@ -10,9 +10,10 @@ const Home = () => {
   return (
     <div className="relative h-auto">
       <FirstScreen/>
-      <FirstScreenContentPart/>
+      {/* <FirstScreenContentPart/> */}
       <DesertScreen/>
       <CityScreen/>
+      {/* <DesertScreen/> */}
     </div>
   );
 };
