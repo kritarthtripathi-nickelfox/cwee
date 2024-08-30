@@ -27,12 +27,12 @@ function FirstScreen() {
                 {scrollY < 300 ? (
                     <>
                         <img
-                            className="LogoImage"
+                            className= {scrollY < 100 ? "LogoImage" : "fadeLogoImage"}
                             alt="Logo"
                             src="/ceewLogo@2x.png"
                         />
                         <img
-                            className="titleImage"
+                            className={scrollY < 100 ? "titleImage" :"fadeTitleImage" }
                             alt="Title"
                             src="/title@2x.png"
                         />

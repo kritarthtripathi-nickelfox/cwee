@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import FirstScreen from "./FirstScreen";
 import DesertScreen from "./DesertScreen";
 import FirstScreenContentPart from "./FirstScreenContentPart";
+import CityScreen from "./CityScreen";
 
 const Home = () => {
 
@@ -11,6 +12,7 @@ const Home = () => {
       <FirstScreen/>
       <FirstScreenContentPart/>
       <DesertScreen/>
+      <CityScreen/>
     </div>
   );
 };

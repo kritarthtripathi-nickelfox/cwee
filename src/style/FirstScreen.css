@@ -15,14 +15,34 @@
     height: 182px;
     width: auto;
   }
+  .fadeTitleImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    margin: auto;
+    height: 182px;
+    width: auto;
+    opacity: 0.3; 
+  }
   
   .LogoImage {
     position: absolute;
-    top: 300px;
+    top: 269px;
     left: 50%; 
     transform: translate(-50%, -50%);
     height: 100px;
     width: auto;
+  }
+  .fadeLogoImage{
+    position: absolute;
+    top: 269px;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: auto;
+    opacity: 0.3; 
   }
   .centerButton {
     position: absolute;
