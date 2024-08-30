@@ -93,3 +93,11 @@
     height: 1px;
     background-color: brown;
 }
+.slide-pane__overlay {
+    position: fixed;
+    /* top: -87px; */
+    left: 0px;
+    right: 0px;
+    bottom: 90px !important;
+    background-color: rgba(0, 0, 0, 0);
+}

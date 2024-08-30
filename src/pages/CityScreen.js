@@ -60,7 +60,7 @@ function CityScreen() {
                 title=""
                 subtitle=""
                 hideHeader
-                from="left"
+                from="bottom"
                 onRequestClose={() => {
                     // triggered on "<" on left top click or on outside click
                     setState({ isPaneOpenLeft: false });
@@ -115,7 +115,7 @@ function CityScreen() {
                 title=""
                 subtitle=""
                 hideHeader
-                from="right"
+                from="bottom"
 
                 onRequestClose={() => {
                     // triggered on "<" on left top click or on outside click
