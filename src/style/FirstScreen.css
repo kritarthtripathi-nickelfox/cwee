@@ -1,41 +1,40 @@
-.FirstScreen {
-    background-image: url('/public/Frame\ 29.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .titleImage {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 50px;
-    margin: auto;
-    height: 182px;
-    width: auto;
-  }
-  
-  .LogoImage {
-    position: absolute;
-    top: 300px;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    height: 100px;
-    width: auto;
-  }
-  .centerButton {
-    position: absolute;
-    top: 61%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #dc2626;
-    color: white;
-    padding: 0.8rem 3rem;
-    border-radius: 0.375rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.3rem;
-    font-weight: 500;
-    z-index: 1;
-  }
+.container {
+  height: 200vh; /* Make sure there's enough content to scroll */
+  position: relative;
+}
+
+.fixed-background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  transition: background 1s ease-in-out;
+}
+
+.first-image {
+  background-image: url('/public/LandingPage.png');
+}
+
+.second-image {
+  background-image: url('/public/camel1.png');
+}
+
+.content-boxes {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
