@@ -57,7 +57,7 @@
     width: 100% !important;
   }
   .TamilNaduScreen {
-    background-image: url('/public/Frame\ 32.png'); 
+    background-image: url('/public/Frame\ 61.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -65,6 +65,12 @@
     position: relative; 
     padding: 2rem;
     z-index: 0;
+}
+.TamilNaduScreenFade {
+    background-image: url('/public/Frame\ 61.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .AndhraPradeshScreen{
     background-image: url('/public/Frame\ 30.png'); 

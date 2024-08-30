@@ -13,10 +13,6 @@ function FirstScreen() {
     }, []);
 
     // Determine visibility and position of the text box based on scrollY
-    const showContent = scrollY >= 200;
-    const textBoxPosition = showContent
-        ? 'top-[10%] translate-y-[-10%]' // Adjust to the final position
-        : 'bottom-[10rem]'; // Initial position
 
     return (
         <div className="relative min-h-screen">
