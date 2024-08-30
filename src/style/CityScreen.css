@@ -101,3 +101,8 @@
     bottom: 90px !important;
     background-color: rgba(0, 0, 0, 0);
 }
+.slide-pane_from_bottom {
+    height: 100vh !important;
+    margin-top:0 !important;
+    transform: translateY(100%);
+}
